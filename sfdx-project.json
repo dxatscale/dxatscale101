@@ -1,0 +1,10 @@
+{
+    "packageDirectories": [
+        {
+            "path": "mdapi",
+            "default": true
+        }
+    ],
+    "namespace": "",
+    "sourceApiVersion": "49.0"
+}
