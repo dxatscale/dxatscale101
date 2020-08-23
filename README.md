@@ -1,5 +1,4 @@
 # dxatscale101 starter pack
----
 
 > This starter pack is forked [salesforce dreamhouse-lwc](https://github.com/trailheadapps/dreamhouse-lwc) and converted into mdapi format
 
@@ -34,3 +33,10 @@ sfdx force:data:tree:import -p ./data/sample-data-plan.json -u playgound-1
 ```
 sfdx force:org:open -u playgound-1
 ```
+
+## Convert mdapi to source format
+
+```
+sfdx force:mdapi:convert -d force-app -r mdapi
+```
+

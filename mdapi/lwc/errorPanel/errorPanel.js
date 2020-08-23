@@ -1,7 +1,7 @@
 import { LightningElement, api } from 'lwc';
 import { reduceErrors } from 'c/ldsUtils';
-import noDataIllustration from './templates/noDataIllustration.html';
-import inlineMessage from './templates/inlineMessage.html';
+import noDataIllustration from './noDataIllustration.html';
+import inlineMessage from './inlineMessage.html';
 
 export default class ErrorPanel extends LightningElement {
     /** Single or array of LDS errors */
