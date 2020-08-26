@@ -123,5 +123,5 @@
     <members>Property__c</members>
     <members>Settings</members>
   </types>
-  <version>49.0</version>
+  <version>48.0</version>
 </Package>
