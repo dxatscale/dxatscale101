@@ -52,6 +52,10 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+<<<<<<< Updated upstream
+=======
+    <externalSharingModel>Private</externalSharingModel>
+>>>>>>> Stashed changes
     <label>Property</label>
     <nameField>
         <label>Property Name</label>
@@ -60,6 +64,7 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Properties</pluralLabel>
+<<<<<<< Updated upstream
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
@@ -413,4 +418,9 @@
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
+=======
+    <searchLayouts></searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+>>>>>>> Stashed changes
 </CustomObject>
