@@ -57,10 +57,19 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Brokers</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
-    <fields>
+    <compactLayouts xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Broker_Compact</fullName>
+        <fields>Name</fields>
+        <fields>Title__c</fields>
+        <fields>Phone__c</fields>
+        <fields>Mobile_Phone__c</fields>
+        <fields>Email__c</fields>
+        <label>Broker Compact</label>
+    </compactLayouts>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Broker_Id__c</fullName>
         <externalId>true</externalId>
         <label>Broker Id</label>
@@ -71,7 +80,7 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Email__c</fullName>
         <externalId>false</externalId>
         <label>Email</label>
@@ -80,7 +89,7 @@
         <type>Email</type>
         <unique>false</unique>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Mobile_Phone__c</fullName>
         <externalId>false</externalId>
         <label>Mobile Phone</label>
@@ -88,7 +97,7 @@
         <trackTrending>false</trackTrending>
         <type>Phone</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Phone__c</fullName>
         <externalId>false</externalId>
         <label>Phone</label>
@@ -96,10 +105,10 @@
         <trackTrending>false</trackTrending>
         <type>Phone</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Picture_IMG__c</fullName>
         <externalId>false</externalId>
-        <formula>IMAGE( Picture__c , &quot;picture&quot; , 150, 150)</formula>
+        <formula>IMAGE( Picture__c , "picture" , 150, 150)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Picture</label>
         <required>false</required>
@@ -107,7 +116,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Picture__c</fullName>
         <externalId>false</externalId>
         <label>Picture</label>
@@ -115,7 +124,7 @@
         <trackTrending>false</trackTrending>
         <type>Url</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Title__c</fullName>
         <externalId>false</externalId>
         <label>Title</label>
@@ -125,16 +134,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <compactLayouts>
-        <fullName>Broker_Compact</fullName>
-        <fields>Name</fields>
-        <fields>Title__c</fields>
-        <fields>Phone__c</fields>
-        <fields>Mobile_Phone__c</fields>
-        <fields>Email__c</fields>
-        <label>Broker Compact</label>
-    </compactLayouts>
-    <listViews>
+    <listViews xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>All</fullName>
         <columns>NAME</columns>
         <filterScope>Everything</filterScope>

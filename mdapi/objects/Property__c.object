@@ -60,10 +60,19 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Properties</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
-    <fields>
+    <compactLayouts xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Property_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>City__c</fields>
+        <fields>Price__c</fields>
+        <fields>Beds__c</fields>
+        <fields>Baths__c</fields>
+        <label>Property Compact Layout</label>
+    </compactLayouts>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Address__c</fullName>
         <externalId>false</externalId>
         <label>Address</label>
@@ -75,7 +84,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Assessed_Value__c</fullName>
         <externalId>false</externalId>
         <label>Assessed Value</label>
@@ -87,7 +96,7 @@
         <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Baths__c</fullName>
         <externalId>false</externalId>
         <label>Baths</label>
@@ -100,7 +109,7 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Beds__c</fullName>
         <externalId>false</externalId>
         <label>Beds</label>
@@ -113,7 +122,7 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Broker__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
@@ -127,7 +136,7 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>City__c</fullName>
         <externalId>false</externalId>
         <label>City</label>
@@ -139,7 +148,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Date_Agreement__c</fullName>
         <externalId>false</externalId>
         <label>Date Agreement</label>
@@ -149,7 +158,7 @@
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Date_Closed__c</fullName>
         <externalId>false</externalId>
         <label>Date Closed</label>
@@ -159,7 +168,7 @@
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Date_Contracted__c</fullName>
         <externalId>false</externalId>
         <label>Date Contracted</label>
@@ -169,7 +178,7 @@
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Date_Listed__c</fullName>
         <defaultValue>TODAY() - 10</defaultValue>
         <externalId>false</externalId>
@@ -180,7 +189,7 @@
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Date_Pre_Market__c</fullName>
         <externalId>false</externalId>
         <label>Date Pre Market</label>
@@ -190,7 +199,7 @@
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Days_On_Market__c</fullName>
         <externalId>false</externalId>
         <formula>TODAY() - Date_Listed__c</formula>
@@ -204,7 +213,7 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Description__c</fullName>
         <externalId>false</externalId>
         <label>Description</label>
@@ -215,7 +224,7 @@
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Location__c</fullName>
         <displayLocationInDecimal>true</displayLocationInDecimal>
         <externalId>false</externalId>
@@ -227,10 +236,10 @@
         <trackTrending>false</trackTrending>
         <type>Location</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Picture_IMG__c</fullName>
         <externalId>false</externalId>
-        <formula>if(ISBLANK(Picture__c), &apos;&apos;, IMAGE(Picture__c, &quot;Picture&quot;))</formula>
+        <formula>if(ISBLANK(Picture__c), '', IMAGE(Picture__c, "Picture"))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Main Picture</label>
         <required>false</required>
@@ -239,7 +248,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Picture__c</fullName>
         <externalId>false</externalId>
         <label>Picture</label>
@@ -249,7 +258,7 @@
         <trackTrending>false</trackTrending>
         <type>Url</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Price_Sold__c</fullName>
         <externalId>false</externalId>
         <label>Price Sold</label>
@@ -261,7 +270,7 @@
         <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Price__c</fullName>
         <externalId>false</externalId>
         <label>Asking Price</label>
@@ -273,10 +282,10 @@
         <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Record_Link__c</fullName>
         <externalId>false</externalId>
-        <formula>LEFT($Api.Partner_Server_URL_260, FIND( &apos;/services&apos;, $Api.Partner_Server_URL_260))+ Id</formula>
+        <formula>LEFT($Api.Partner_Server_URL_260, FIND( '/services', $Api.Partner_Server_URL_260))+ Id</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Record Link</label>
         <required>false</required>
@@ -285,7 +294,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>State__c</fullName>
         <externalId>false</externalId>
         <label>State</label>
@@ -297,7 +306,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Status__c</fullName>
         <externalId>false</externalId>
         <label>Status</label>
@@ -337,7 +346,7 @@
             </valueSetDefinition>
         </valueSet>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Tags__c</fullName>
         <externalId>false</externalId>
         <label>Tags</label>
@@ -349,10 +358,10 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Thumbnail_IMG__c</fullName>
         <externalId>false</externalId>
-        <formula>if(ISBLANK(Thumbnail__c), &quot;&quot;, IMAGE(Thumbnail__c, &quot;Picture&quot;, 200, 200))</formula>
+        <formula>if(ISBLANK(Thumbnail__c), "", IMAGE(Thumbnail__c, "Picture", 200, 200))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Main Thumbnail</label>
         <required>false</required>
@@ -361,7 +370,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Thumbnail__c</fullName>
         <externalId>false</externalId>
         <label>Thumbnail</label>
@@ -371,19 +380,7 @@
         <trackTrending>false</trackTrending>
         <type>Url</type>
     </fields>
-    <fields>
-        <fullName>Title__c</fullName>
-        <externalId>false</externalId>
-        <label>Title</label>
-        <length>100</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
+    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>Zip__c</fullName>
         <externalId>false</externalId>
         <label>Zip</label>
@@ -395,16 +392,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <compactLayouts>
-        <fullName>Property_Compact_Layout</fullName>
-        <fields>Name</fields>
-        <fields>City__c</fields>
-        <fields>Price__c</fields>
-        <fields>Beds__c</fields>
-        <fields>Baths__c</fields>
-        <label>Property Compact Layout</label>
-    </compactLayouts>
-    <listViews>
+    <listViews xmlns="http://soap.sforce.com/2006/04/metadata">
         <fullName>All</fullName>
         <columns>NAME</columns>
         <columns>City__c</columns>
