@@ -1,7 +1,35 @@
 @isTest
 private class TestPropertyController {
     private final static String MOCK_PICTURE_NAME = 'MockPictureName';
+    @TestSetup
+    static void makeData(){
 
+        User sysAdminUser = new User(
+            ProfileId = [SELECT Id FROM Profile WHERE  Name = 'System Administrator'].Id,
+            LastName = 'lastname',
+            Email = 'testSysAdUser@test.com',
+            Username = 'testSysAdUser@test.com' + System.currentTimeMillis(),
+            CompanyName = 'TEST',
+            Title = 'title',
+            Alias = 'alias',
+            TimeZoneSidKey = 'Australia/Sydney',
+            EmailEncodingKey = 'ISO-8859-1',
+            LanguageLocaleKey = 'en_US',
+            LocaleSidKey = 'en_AU'
+        );     	
+
+        insert sysAdminUser;
+
+        List<PermissionSet> permSet = [SELECT Id, Name FROM PermissionSet WHERE Name = 'dreamhouse'];
+        if(!permSet.isEmpty()){
+            PermissionSetAssignment psa = new PermissionSetAssignment();
+            psa.PermissionSetId = permSet[0].Id;
+            psa.AssigneeId = sysAdminUser.Id;
+
+            insert psa;
+        }
+
+    }
     public static void createProperties(Integer amount) {
         List<Property__c> properties = new List<Property__c>();
         for (Integer i = 0; i < amount; i++) {
@@ -17,6 +45,8 @@ private class TestPropertyController {
         insert properties;
     }
     static testMethod void testGetPagedPropertyList() {
+        User sysAdminUser = [SELECT Id FROM User WHERE Email = 'testSysAdUser@test.com' LIMIT 1];
+		system.runAs(sysAdminUser) { 
         TestPropertyController.createProperties(5);
         Test.startTest();
         PagedResult result = PropertyController.getPagedPropertyList(
@@ -29,9 +59,12 @@ private class TestPropertyController {
         );
         Test.stopTest();
         System.assertEquals(5, result.records.size());
+        }
     }
 
     static testMethod void testGetPicturesNoResults() {
+        User sysAdminUser = [SELECT Id FROM User WHERE Email = 'testSysAdUser@test.com' LIMIT 1];
+		system.runAs(sysAdminUser) { 
         Property__c property = new Property__c(Name = 'Name');
         insert property;
 
@@ -42,9 +75,12 @@ private class TestPropertyController {
         Test.stopTest();
 
         System.assertEquals(null, items);
+        }
     }
 
     static testMethod void testGetPicturesWithResults() {
+        User sysAdminUser = [SELECT Id FROM User WHERE Email = 'testSysAdUser@test.com' LIMIT 1];
+		system.runAs(sysAdminUser) { 
         Property__c property = new Property__c(Name = 'Name');
         insert property;
 
@@ -75,5 +111,6 @@ private class TestPropertyController {
 
         System.assertEquals(1, items.size());
         System.assertEquals(MOCK_PICTURE_NAME, items[0].Title);
+        }
     }
 }
