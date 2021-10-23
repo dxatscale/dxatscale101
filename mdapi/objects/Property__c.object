@@ -5,7 +5,27 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -13,7 +33,27 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -21,7 +61,27 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -29,7 +89,27 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -37,11 +117,40 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>Property_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Property_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>City__c</fields>
+        <fields>Price__c</fields>
+        <fields>Beds__c</fields>
+        <fields>Baths__c</fields>
+        <label>Property Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
@@ -52,28 +161,10 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <label>Property</label>
-    <nameField>
-        <label>Property Name</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-    </nameField>
-    <pluralLabel>Properties</pluralLabel>
-    <searchLayouts></searchLayouts>
-    <sharingModel>ReadWrite</sharingModel>
-    <visibility>Public</visibility>
-    <compactLayouts xmlns="http://soap.sforce.com/2006/04/metadata">
-        <fullName>Property_Compact_Layout</fullName>
-        <fields>Name</fields>
-        <fields>City__c</fields>
-        <fields>Price__c</fields>
-        <fields>Beds__c</fields>
-        <fields>Baths__c</fields>
-        <label>Property Compact Layout</label>
-    </compactLayouts>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
         <fullName>Address__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Address</label>
         <length>100</length>
@@ -84,8 +175,9 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Assessed_Value__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Assessed Value</label>
         <precision>18</precision>
@@ -96,8 +188,9 @@
         <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Baths__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Baths</label>
         <precision>2</precision>
@@ -109,8 +202,9 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Beds__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Beds</label>
         <precision>2</precision>
@@ -122,8 +216,9 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Broker__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Broker</label>
@@ -136,8 +231,9 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>City__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>City</label>
         <length>50</length>
@@ -148,8 +244,9 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Date_Agreement__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Date Agreement</label>
         <required>false</required>
@@ -158,8 +255,9 @@
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Date_Closed__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Date Closed</label>
         <required>false</required>
@@ -168,8 +266,9 @@
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Date_Contracted__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Date Contracted</label>
         <required>false</required>
@@ -178,8 +277,9 @@
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Date_Listed__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <defaultValue>TODAY() - 10</defaultValue>
         <externalId>false</externalId>
         <label>Date Listed</label>
@@ -189,8 +289,9 @@
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Date_Pre_Market__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Date Pre Market</label>
         <required>false</required>
@@ -199,7 +300,7 @@
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Days_On_Market__c</fullName>
         <externalId>false</externalId>
         <formula>TODAY() - Date_Listed__c</formula>
@@ -213,8 +314,9 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Description__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Description</label>
         <length>500</length>
@@ -224,8 +326,71 @@
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Features__c</fullName>
+        <externalId>false</externalId>
+        <label>Features</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Air conditioning</fullName>
+                    <default>false</default>
+                    <label>Air conditioning</label>
+                </value>
+                <value>
+                    <fullName>Carport/Garage</fullName>
+                    <default>false</default>
+                    <label>Carport/Garage</label>
+                </value>
+                <value>
+                    <fullName>Garden/Backyard</fullName>
+                    <default>false</default>
+                    <label>Garden/Backyard</label>
+                </value>
+                <value>
+                    <fullName>Solar panels</fullName>
+                    <default>false</default>
+                    <label>Solar panels</label>
+                </value>
+                <value>
+                    <fullName>Deck/Pergola Dishwasher</fullName>
+                    <default>false</default>
+                    <label>Deck/Pergola Dishwasher</label>
+                </value>
+                <value>
+                    <fullName>Swimming pool</fullName>
+                    <default>false</default>
+                    <label>Swimming pool</label>
+                </value>
+                <value>
+                    <fullName>Built-in barbecue</fullName>
+                    <default>false</default>
+                    <label>Built-in barbecue</label>
+                </value>
+                <value>
+                    <fullName>Water feature</fullName>
+                    <default>false</default>
+                    <label>Water feature</label>
+                </value>
+                <value>
+                    <fullName>Garden gnomes</fullName>
+                    <default>false</default>
+                    <label>Garden gnomes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
         <fullName>Location__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <displayLocationInDecimal>true</displayLocationInDecimal>
         <externalId>false</externalId>
         <label>Location</label>
@@ -236,10 +401,11 @@
         <trackTrending>false</trackTrending>
         <type>Location</type>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Picture_IMG__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
-        <formula>if(ISBLANK(Picture__c), '', IMAGE(Picture__c, "Picture"))</formula>
+        <formula>if(ISBLANK(Picture__c), &apos;&apos;, IMAGE(Picture__c, &quot;Picture&quot;))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Main Picture</label>
         <required>false</required>
@@ -248,8 +414,9 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Picture__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Picture</label>
         <required>false</required>
@@ -258,8 +425,9 @@
         <trackTrending>false</trackTrending>
         <type>Url</type>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Price_Sold__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Price Sold</label>
         <precision>8</precision>
@@ -270,8 +438,9 @@
         <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Price__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Asking Price</label>
         <precision>8</precision>
@@ -282,10 +451,11 @@
         <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Record_Link__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
-        <formula>LEFT($Api.Partner_Server_URL_260, FIND( '/services', $Api.Partner_Server_URL_260))+ Id</formula>
+        <formula>LEFT($Api.Partner_Server_URL_260, FIND( &apos;/services&apos;, $Api.Partner_Server_URL_260))+ Id</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Record Link</label>
         <required>false</required>
@@ -294,8 +464,9 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>State__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>State</label>
         <length>20</length>
@@ -306,8 +477,9 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Status__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Status</label>
         <required>false</required>
@@ -346,8 +518,9 @@
             </valueSetDefinition>
         </valueSet>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Tags__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Tags</label>
         <length>255</length>
@@ -358,10 +531,11 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Thumbnail_IMG__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
-        <formula>if(ISBLANK(Thumbnail__c), "", IMAGE(Thumbnail__c, "Picture", 200, 200))</formula>
+        <formula>if(ISBLANK(Thumbnail__c), &quot;&quot;, IMAGE(Thumbnail__c, &quot;Picture&quot;, 200, 200))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Main Thumbnail</label>
         <required>false</required>
@@ -370,8 +544,9 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Thumbnail__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Thumbnail</label>
         <required>false</required>
@@ -380,8 +555,9 @@
         <trackTrending>false</trackTrending>
         <type>Url</type>
     </fields>
-    <fields xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
         <fullName>Zip__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <externalId>false</externalId>
         <label>Zip</label>
         <length>10</length>
@@ -392,7 +568,8 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <listViews xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Property</label>
+    <listViews>
         <fullName>All</fullName>
         <columns>NAME</columns>
         <columns>City__c</columns>
@@ -401,4 +578,14 @@
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
+    <nameField>
+        <label>Property Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Properties</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>
