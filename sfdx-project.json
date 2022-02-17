@@ -2,7 +2,8 @@
     "packageDirectories": [
         {
             "path": "mdapi",
-            "default": true
+            "default": true,
+            "sfdcLoginUrl" : "resilient-moose-tw628n-dev-ed.my.salesforce.com"
         }
     ],
     "namespace": "",
