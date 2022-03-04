@@ -95,5 +95,5 @@
         <members>Settings</members>
         <name>CustomTab</name>
     </types>
-    <version>52.0</version>
+    <version>54.0</version>
 </Package>
