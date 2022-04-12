@@ -17,6 +17,7 @@
         <members>SampleDataController</members>
         <members>TestPropertyController</members>
         <members>TestSampleDataController</members>
+        <members>ContactController</members>
         <name>ApexClass</name>
     </types>
     <types>
